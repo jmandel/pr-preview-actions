@@ -10,7 +10,7 @@ jobs:
     - name: Standin for build step
       run: |
         mkdir -p public
-        cp *.html *.css *.js public
+        cp *.html *.css *.js public || true
     - name: Pushdown to PR subdir
       env:
         PR_NUMBER: ${{github.event.number}}
