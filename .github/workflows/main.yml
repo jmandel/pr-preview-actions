@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Standin for build step
-      shell: |
+      run: |
         mkdir -p public
         cp *.html *.css *.js public
     - name: Pushdown to PR subdir
